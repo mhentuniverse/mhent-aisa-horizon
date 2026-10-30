@@ -1,0 +1,24 @@
+{
+  "name": "theme-aisa-horizon",
+  "displayName": "AISA Horizon Celestial Theme",
+  "description": "The official dark celestial obsidian theme of Miyazaki Haruto Entertainment Co., Ltd. for AISA Horizon Studio.",
+  "categories": [
+    "Themes"
+  ],
+  "version": "1.0.0",
+  "publisher": "mhentuniverse",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "AISA Horizon Celestial Obsidian",
+        "label": "AISA Horizon Celestial Obsidian",
+        "uiTheme": "vs-dark",
+        "path": "./themes/celestial-obsidian.json"
+      }
+    ]
+  }
+}

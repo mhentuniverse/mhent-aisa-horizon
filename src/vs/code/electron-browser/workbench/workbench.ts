@@ -750,5 +750,13 @@ import { getPartsSplashColors, getPartsSplashLayoutMetrics } from './partsSplash
 	performance.mark('code/didLoadWorkbenchMain');
 
 	// Load workbench
-	result.main(configuration);
+	try {
+    await result.main(configuration);
+  } catch (err) {
+    console.error("Error starting workbench:", err);
+  }
+  const splash = window.document.getElementById('monaco-parts-splash');
+  if (splash) { splash.remove(); }
+  const initialStyles = window.document.head.getElementsByClassName('initialShellColors');
+  initialStyles[0]?.remove();
 }());

@@ -34,6 +34,7 @@ if "%~1"=="--builtin" goto builtin
 set NODE_ENV=development
 set VSCODE_DEV=1
 set VSCODE_CLI=1
+set ELECTRON_RUN_AS_NODE=
 set ELECTRON_ENABLE_LOGGING=1
 set ELECTRON_ENABLE_STACK_DUMPING=1
 
@@ -45,7 +46,7 @@ for %%A in (%*) do (
 )
 
 :: Launch Code
-%CODE% . %DISABLE_TEST_EXTENSION% %*
+%CODE% . --user-data-dir="D:\mhent-aisa-horizon\.data" %DISABLE_TEST_EXTENSION% %*
 goto end
 
 :builtin

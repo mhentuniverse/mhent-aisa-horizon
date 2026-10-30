@@ -92,19 +92,19 @@
 		"chatExtensionId": "GitHub.copilot-chat",
 		"chatExtensionOutputId": "GitHub.copilot-chat.GitHub Copilot Chat.log",
 		"chatExtensionOutputExtensionStateCommand": "github.copilot.debug.extensionState",
-		"documentationUrl": "https://aka.ms/github-copilot-overview",
-		"termsStatementUrl": "https://aka.ms/github-copilot-terms-statement",
-		"privacyStatementUrl": "https://aka.ms/github-copilot-privacy-statement",
+		"documentationUrl": "https://mhentuniverse.com",
+		"termsStatementUrl": "https://mhentuniverse.com/terms.html",
+		"privacyStatementUrl": "https://mhentuniverse.com/privacy.html",
 		"skusDocumentationUrl": "https://aka.ms/github-copilot-plans",
 		"optimizeUsageDocumentationUrl": "https://aka.ms/token-usage-tips",
 		"publicCodeMatchesUrl": "https://aka.ms/github-copilot-match-public-code",
-		"managePlanUrl": "https://aka.ms/github-copilot-manage-plan",
-		"upgradePlanUrl": "https://aka.ms/github-copilot-upgrade-plan",
-		"signUpUrl": "https://aka.ms/github-sign-up",
+		"managePlanUrl": "https://accounts.mhentuniverse.com/profile.html",
+		"upgradePlanUrl": "https://accounts.mhentuniverse.com/upgrade.html",
+		"signUpUrl": "https://accounts.mhentuniverse.com/signup.html",
 		"provider": {
 			"default": {
-				"id": "github",
-				"name": "GitHub"
+				"id": "mhentuniverse",
+				"name": "MHEnt Universe"
 			},
 			"enterprise": {
 				"id": "github-enterprise",
@@ -123,7 +123,7 @@
 				"name": "Microsoft"
 			}
 		},
-		"providerExtensionId": "vscode.github-authentication",
+		"providerExtensionId": "mhentuniverse.mhent-authentication",
 		"providerUriSetting": "github-enterprise.uri",
 		"providerScopes": [
 			[
@@ -165,6 +165,10 @@
 		],
 		"microsoft": [
 			"vscode.github-authentication"
+		],
+		"mhentuniverse": [
+			"mhentuniverse.mhent-companion",
+			"mhentuniverse.mhent-authentication"
 		]
 	},
 	"onboardingKeymaps": [
@@ -205,6 +209,12 @@
 		}
 	],
 	"onboardingThemes": [
+		{
+			"id": "celestial-obsidian",
+			"label": "AISA Horizon Celestial Obsidian",
+			"themeId": "AISA Horizon Celestial Obsidian",
+			"type": "dark"
+		},
 		{
 			"id": "dark-2026",
 			"label": "Dark 2026",

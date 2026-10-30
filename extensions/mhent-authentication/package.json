@@ -1,0 +1,49 @@
+{
+  "name": "mhent-authentication",
+  "displayName": "MHEnt Universe Authentication",
+  "description": "Official MHEnt Universe Account Authentication Provider for AISA Horizon Studio.",
+  "publisher": "mhentuniverse",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onAuthenticationRequest:mhentuniverse",
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "authentication": [
+      {
+        "id": "mhentuniverse",
+        "label": "MHEnt Universe Account"
+      }
+    ],
+    "commands": [
+      {
+        "command": "mhentuniverse.signIn",
+        "title": "Sign In to MHEnt Universe",
+        "category": "MHEnt Universe"
+      },
+      {
+        "command": "mhentuniverse.signOut",
+        "title": "Sign Out of MHEnt Universe",
+        "category": "MHEnt Universe"
+      },
+      {
+        "command": "mhentuniverse.showProfile",
+        "title": "View MHEnt Profile",
+        "category": "MHEnt Universe"
+      },
+      {
+        "command": "mhentuniverse.switchAccount",
+        "title": "Switch MHEnt Account",
+        "category": "MHEnt Universe"
+      }
+    ]
+  }
+}

@@ -43,7 +43,10 @@ export class PartsSplash {
 		@IEditorGroupsService editorGroupsService: IEditorGroupsService,
 		@ILifecycleService lifecycleService: ILifecycleService,
 	) {
-		Event.once(_layoutService.onDidLayoutMainContainer)(() => {
+		const doRemove = () => { this._removePartsSplash(); perf.mark('code/didRemovePartsSplash'); };
+    mainWindow.setTimeout(doRemove, 100);
+    _layoutService.whenRestored.then(doRemove);
+    Event.once(_layoutService.onDidLayoutMainContainer)(() => {
 			this._removePartsSplash();
 			perf.mark('code/didRemovePartsSplash');
 		}, undefined, this._disposables);

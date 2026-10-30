@@ -1,0 +1,63 @@
+{
+  "name": "mhent-companion",
+  "displayName": "AISA Horizon Companions (Harmony & Echo)",
+  "description": "Floating mascot companions & AI Model Agent for AISA Horizon Studio (Miyazaki Haruto Entertainment Co., Ltd.).",
+  "publisher": "mhentuniverse",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": [
+    "Other",
+    "AI"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mhent.companion.talk",
+        "title": "Trò chuyện với Harmony & Echo",
+        "category": "AISA Companion"
+      },
+      {
+        "command": "mhent.companion.cheer",
+        "title": "Lời động viên từ Harmony 🌸",
+        "category": "AISA Companion"
+      },
+      {
+        "command": "mhent.companion.toggleMascot",
+        "title": "Bật/Tắt Mascot trên Status Bar",
+        "category": "AISA Companion"
+      },
+      {
+        "command": "mhent.companion.setApiKey",
+        "title": "Cấu hình Gemini API Key cho AI Agent",
+        "category": "AISA Companion"
+      }
+    ],
+    "chatParticipants": [
+      {
+        "id": "mhentuniverse.aisa",
+        "name": "aisa",
+        "fullName": "AISA Horizon Agent",
+        "description": "Trợ lý trí tuệ nhân tạo vũ trụ MHEnt Universe"
+      },
+      {
+        "id": "mhentuniverse.harmony",
+        "name": "harmony",
+        "fullName": "Harmony (Yachiyo)",
+        "description": "Linh vật đồng hành dịu dàng, chu đáo, hỗ trợ giải thích code & kiến tạo"
+      },
+      {
+        "id": "mhentuniverse.echo",
+        "name": "echo",
+        "fullName": "Echo (March 7th)",
+        "description": "Linh vật đồng hành năng động, sắc bén, chuyên gỡ lỗi & kiểm thử"
+      }
+    ]
+  }
+}
