@@ -35,6 +35,21 @@
 	"nodejsArtifactFeed": "",
 	"electronArtifactFeed": "",
 	"urlProtocol": "aisa-horizon",
+	"configurationDefaults": {
+		"workbench.colorTheme": "AISA Horizon Celestial Obsidian",
+		"editor.fontFamily": "'JetBrains Mono', 'Plus Jakarta Sans', 'Consolas', monospace",
+		"editor.fontSize": 14,
+		"editor.lineHeight": 1.6,
+		"editor.fontLigatures": true,
+		"editor.smoothScrolling": true,
+		"editor.cursorSmoothCaretAnimation": "on",
+		"editor.cursorBlinking": "smooth",
+		"editor.minimap.smoothScrolling": true,
+		"workbench.list.smoothScrolling": true,
+		"terminal.integrated.smoothScrolling": true,
+		"terminal.integrated.fontFamily": "'JetBrains Mono', Consolas, monospace",
+		"chat.defaultAgent": "mhentuniverse.aisa"
+	},
 	"agentsTelemetryAppName": "aisa-horizon-agents",
 	"webviewContentExternalBaseUrlTemplate": "https://{{uuid}}.vscode-cdn.net/insider/ef65ac1ba57f57f2a3961bfe94aa20481caca4c6/out/vs/workbench/contrib/webview/browser/pre/",
 	"builtInExtensions": [
