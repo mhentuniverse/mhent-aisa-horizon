@@ -1,6 +1,7 @@
 {
 	"nameShort": "AISA Horizon",
 	"nameLong": "AISA Horizon Studio",
+	"aisaVersion": "1.0.0",
 	"applicationName": "aisa-horizon",
 	"dataFolderName": ".aisa-horizon",
 	"sharedDataFolderName": ".aisa-horizon-shared",

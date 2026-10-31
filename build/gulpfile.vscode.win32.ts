@@ -81,14 +81,15 @@ function buildWin32Setup(arch: string, target: string): task.CallbackTask {
 		const productJson = JSON.parse(fs.readFileSync(originalProductJsonPath, 'utf8'));
 		productJson['target'] = target;
 
+		const aisaVersion = (product as typeof product & { aisaVersion?: string }).aisaVersion || '1.0.0';
 		const definitions: Record<string, unknown> = {
 			NameLong: product.nameLong,
 			NameShort: product.nameShort,
 			DirName: product.win32DirName,
-			Version: pkg.version,
-			RawVersion: pkg.version.replace(/-\w+$/, ''),
+			Version: aisaVersion,
+			RawVersion: aisaVersion.replace(/-\w+$/, ''),
 			Commit: commit,
-			NameVersion: product.win32NameVersion + (target === 'user' ? ' (User)' : ''),
+			NameVersion: product.win32NameVersion,
 			ExeBasename: product.nameShort,
 			RegValueName: product.win32RegValueName,
 			ShellNameShort: product.win32ShellNameShort,
