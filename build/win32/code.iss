@@ -1,4 +1,4 @@
-#define RootLicenseFileName FileExists(RepoDir + '\LICENSE.rtf') ? 'LICENSE.rtf' : 'LICENSE.txt'
+﻿#define RootLicenseFileName FileExists(RepoDir + '\LICENSE.rtf') ? 'LICENSE.rtf' : 'LICENSE.txt'
 #define LocalizedLanguageFile(Language = "") \
     DirExists(RepoDir + "\licenses") && Language != "" \
       ? ('; LicenseFile: "' + RepoDir + '\licenses\LICENSE-' + Language + '.rtf"') \
@@ -74,6 +74,8 @@ Type: filesandordirs; Name: "{app}\{#VersionedResourcesFolder}\resources\app\nod
 Type: filesandordirs; Name: "{app}\{#VersionedResourcesFolder}\resources\app\node_modules.asar.unpacked"; Check: IsNotBackgroundUpdate
 Type: files; Name: "{app}\{#VersionedResourcesFolder}\resources\app\node_modules.asar"; Check: IsNotBackgroundUpdate
 Type: files; Name: "{app}\{#VersionedResourcesFolder}\resources\app\Credits_45.0.2454.85.html"; Check: IsNotBackgroundUpdate
+Type: filesandordirs; Name: "{userappdata}\{#NameShort}"; Tasks: cleanprofile
+Type: filesandordirs; Name: "{userappdata}\{#NameLong}"; Tasks: cleanprofile
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}\_"
@@ -90,6 +92,7 @@ Name: "addcontextmenufolders"; Description: "{cm:AddContextMenuFolders,{#NameSho
 Name: "associatewithfiles"; Description: "{cm:AssociateWithFiles,{#NameShort}}"; GroupDescription: "{cm:Other}"
 Name: "addtopath"; Description: "{cm:AddToPath}"; GroupDescription: "{cm:Other}"
 Name: "runcode"; Description: "{cm:RunAfter,{#NameShort}}"; GroupDescription: "{cm:Other}"; Check: WizardSilent
+Name: "cleanprofile"; Description: "Clean slate install (Reset profile, session và dữ liệu cũ)"; GroupDescription: "{cm:Other}"; Flags: unchecked
 
 [Dirs]
 Name: "{app}"; AfterInstall: DisableAppDirInheritance
@@ -2001,3 +2004,4 @@ begin
 
   Exec(ExpandConstant('{sys}\icacls.exe'), ExpandConstant('"{app}" /inheritancelevel:r ') + Permissions, '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
 end;
+
