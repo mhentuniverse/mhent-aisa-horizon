@@ -183,7 +183,7 @@ export class OnboardingVariationA extends Disposable implements IOnboardingServi
 		this.overlay = append(container, $('.onboarding-a-overlay'));
 		this.overlay.setAttribute('role', 'dialog');
 		this.overlay.setAttribute('aria-modal', 'true');
-		this.overlay.setAttribute('aria-label', localize('onboarding.a.aria', "Welcome to Visual Studio Code"));
+		this.overlay.setAttribute('aria-label', localize('onboarding.a.aria', "Welcome to AISA Horizon Studio"));
 
 		// Card
 		this.card = append(this.overlay, $('.onboarding-a-card'));
@@ -454,7 +454,7 @@ export class OnboardingVariationA extends Disposable implements IOnboardingServi
 				if (!this._footerSignInBtn && !this._userSignedIn) {
 					this._footerSignInBtn = append(this.footerLeft, $<HTMLButtonElement>('button.onboarding-a-signin-nudge-btn'));
 					this._footerSignInBtn.type = 'button';
-					this._footerSignInBtn.textContent = localize('onboarding.sessions.signInNudge', "Sign in to use GitHub Copilot");
+					this._footerSignInBtn.textContent = localize('onboarding.sessions.signInNudge', "Sign in to MHEnt Universe");
 					this.stepDisposables.add(addDisposableListener(this._footerSignInBtn, EventType.CLICK, async () => {
 						this._logAction('signInNudge');
 						await this._handleSignIn();
@@ -486,10 +486,10 @@ export class OnboardingVariationA extends Disposable implements IOnboardingServi
 		const content = append(wrapper, $('.onboarding-a-signin-content'));
 		const contentMain = append(content, $('.onboarding-a-signin-content-main'));
 		const title = append(contentMain, $('h2.onboarding-a-signin-title'));
-		title.textContent = localize('onboarding.signIn.heroTitle', "Welcome to VS Code");
+		title.textContent = localize('onboarding.signIn.heroTitle', "Welcome to AISA Horizon Studio");
 
 		const subtitle = append(contentMain, $('p.onboarding-a-signin-subtitle'));
-		subtitle.textContent = localize('onboarding.signIn.heroSubtitle', "Sign in to use GitHub Copilot.");
+		subtitle.textContent = localize('onboarding.signIn.heroSubtitle', "Sign in to your MHEnt Universe account to get started.");
 
 		const actions = append(contentMain, $('.onboarding-a-signin-actions'));
 
@@ -534,9 +534,9 @@ export class OnboardingVariationA extends Disposable implements IOnboardingServi
 	}
 
 	private _renderDefaultSignInActions(actions: HTMLElement): void {
-		const githubBtn = this._registerStepFocusable(this._createSignInButton(actions, 'github', localize('onboarding.signIn.github', "Continue with GitHub"), {
+		const githubBtn = this._registerStepFocusable(this._createSignInButton(actions, 'github', localize('onboarding.signIn.github', "Continue with MHEnt Universe"), {
 			emphasized: true,
-			label: localize('onboarding.signIn.github.aria', "Continue with GitHub")
+			label: localize('onboarding.signIn.github.aria', "Continue with MHEnt Universe")
 		}));
 		this.stepDisposables.add(addDisposableListener(githubBtn, EventType.CLICK, () => {
 			this._logAction('signIn', undefined, 'github');
@@ -713,7 +713,7 @@ export class OnboardingVariationA extends Disposable implements IOnboardingServi
 			mark.classList.add(providerClass);
 			mark.setAttribute('aria-hidden', 'true');
 			if (providerClass === 'github' || providerClass === 'github-enterprise') {
-				mark.appendChild(renderIcon(Codicon.github));
+				mark.appendChild(renderIcon(Codicon.sparkle));
 			}
 		}
 
